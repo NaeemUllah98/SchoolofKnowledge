@@ -15,12 +15,17 @@
 // app.listen(port, ()=>{
 //     console.log("my server is running");
 // })
+
+
 const express = require("express");
 const app = express();
+const userRoutes = require("./routes/userRoutes");
 
-app.get("/", (req, res)=>{
-res.status(200).send("hello, his is my first api");
-})
+app.use("/users", userRoutes);
+
+// app.get("/", (req, res)=>{
+// res.status(200).send("hello, his is my first api");
+// })
 
 const port= 5000;
 app.listen(port, ()=>{
