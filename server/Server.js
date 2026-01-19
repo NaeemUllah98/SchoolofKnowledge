@@ -1,17 +1,33 @@
+// const express = require("express");
+// const app = express();
+
+// app.get("/", (req, res)=>{
+//     res.status(200).send("hello welcome in mern world");
+
+// })
+
+// app.get("/register", (req, res)=>{
+//     res.status(200).send("hello this is my 2nd api Naeem, now you can move to backend" )
+
+// })
+
+// const port= 5000;
+// app.listen(port, ()=>{
+//     console.log("my server is running");
+// })
+
+
 const express = require("express");
 const app = express();
+const userRoutes = require("./routes/userRoutes");
 
-app.get("/", (req, res)=>{
-    res.status(200).send("hello welcome in mern world");
+app.use("/users", userRoutes);
 
-})
-
-app.get("/register", (req, res)=>{
-    res.status(200).send("hello this is my 2nd api Naeem, now you can move to backend" )
-
-})
-
+// app.get("/", (req, res)=>{
+// res.status(200).send("hello, his is my first api");
+// })
+//i am started learning backebd on 19-01-2025
 const port= 5000;
 app.listen(port, ()=>{
-    console.log("my server is running");
+    console.log("server running on port 5000");
 })
