@@ -26,8 +26,8 @@ app.use("/users", userRoutes);
 // app.get("/", (req, res)=>{
 // res.status(200).send("hello, his is my first api");
 // })
-
+//i am started learning backebd on 19-01-2025
 const port= 5000;
 app.listen(port, ()=>{
-    console.log("server running");
+    console.log("server running on port 5000");
 })
